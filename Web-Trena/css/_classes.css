@@ -296,13 +296,13 @@ input[type=file].hidden {
 	background-image: url(../assets/pics/background.jpeg);
 	background-repeat: no-repeat;
 	background-origin: border-box;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 }
 
 .hero.hero-banner img {
-	mix-blend-mode: multiply;
+	border: 1px solid black;
 	height: 100%;
 }
 
@@ -311,8 +311,6 @@ input[type=file].hidden {
 	padding: 6px;
 	grid-column: 2 / 4;
 	grid-row: 2 / 3;
-	background-color: #0005;
-	border: 1px solid black;
 }
 
 .hero.hero-banner h1 {
