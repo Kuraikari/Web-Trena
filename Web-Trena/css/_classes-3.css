@@ -113,25 +113,27 @@ code {
 /* **********  NAVIGATION */
 
 .navigation {
-    grid-area: 1 / 1 / 2 / 7;
-    background: crimson;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: #f9fa;
     position: sticky;
     top: 0;
     left: 0;
     transition: 200ms;
-    height: 110%;
+    justify-content: center;
 }
 
-.navigation nav ul li {
+.navigation * {
     list-style: none;
-    padding: 0.4%;
-    margin: 1.0%;
+    padding: 14px;
+    margin: 0.8%;
     float: left;
-    background: darkslategrey;
-    border: 3px inset black;
+    background: #f8f2;
     transition: 200ms;
-
 }
+
+/* ********** **********/
 
 .search {
     position: relative;
@@ -198,38 +200,44 @@ div.create {
 
 /*         NAVIGATION          */
 
-.navigation nav ul li a {
+.navigation *:not(div) {
     color: white;
     text-decoration: none;
     padding: 10px;
 }
 
-.navigation nav ul li:hover {
+.navigation *:not(div):hover {
     border-color: white;
-    padding: 0.5%;
+    padding: 10px;
     background-color: azure;
 }
 
-.navigation nav ul li:hover a {
+.navigation *:not(div):hover {
     color: black;
 }
 
-.navigation nav ul li li {
+.navigation *:not(div) * {
     display: none;
 }
 
-.navigation nav ul li:hover li {
+.navigation *:not(div):hover * {
     display: block;
 }
 
 .navigation:focus-within {
     background: black;
-    height: 70%;
 }
 
-.navigation:focus-within nav ul li {
+.navigation:focus-within *:not(div) {
     background: crimson;
+    border: 1px solid darkred;
+    box-shadow: 0 0 25px 0 #f0f0;
+    transition: 200ms;
+}
+
+.navigation:focus-within *:not(div):hover {
     border-color: darkred;
+    box-shadow: 0 0 1px 1px red;
 }
 
 /* ********** MAIN CONTENT */
