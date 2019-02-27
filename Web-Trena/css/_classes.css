@@ -325,6 +325,12 @@ input[type=file].hidden {
 	margin-left: -150px;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /********************************************/
 /************ MEDIA QUERIES!!!!!! ***********/
 /********************************************/

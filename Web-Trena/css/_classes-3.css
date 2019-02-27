@@ -100,7 +100,7 @@ code {
 }
 
 .parallax {
-	background: linear-gradient(to right,#5ab, blue);
+	background: linear-gradient(to right,#5ab0, #44f0);
     background-attachment: fixed;
     height: 500px;
     width: 100%;
@@ -112,14 +112,18 @@ code {
 
 /* **********  NAVIGATION */
 
+nav {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
 .navigation {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    background: #f9fa;
-    position: sticky;
-    top: 0;
-    left: 0;
+    background: #f9ff;
     transition: 200ms;
     justify-content: center;
 }
@@ -266,18 +270,31 @@ div.create {
 
 
 /* ********* FOOTER */
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+
 .footer {
     box-sizing: border-box;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    padding: 14px 0;
-    grid-area: 5 / 1 / 6 / 7;
     text-align: left;
+    background: #f9ff;
+    color: white;
+}
+
+.footer header {
+  padding: 10px;
 }
 
 .footer ul {
-    margin: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 6px;
 }
 
 .footer ul li {
